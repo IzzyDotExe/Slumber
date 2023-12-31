@@ -1,18 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Rigidbody2D _rigidBody;
+    private SpriteRenderer _spriteRenderer;
+    private InputActions _inputActions;
+    
+    private void Awake()
     {
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        _rigidBody = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _inputActions = new InputActions();
         
     }
 }
